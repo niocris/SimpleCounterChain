@@ -1,0 +1,18 @@
+SimpleCounterChain/Cosmos
+
+# 1. Создание проекта блокчейна
+ignite scaffold chain simplecounterchain && \
+cd simplecounterchain && \
+
+# 2. Создание модуля и хранилища данных (счетчика)
+ignite scaffold module counter && \
+ignite scaffold single count value:uint64 --module counter && \
+
+# 3. Создание сообщения (транзакции) для увеличения счетчика
+ignite scaffold message IncrementCount amount:uint64 --module counter --response newCount:uint64 && \
+
+# 4. (Ручной шаг) Инструкция по добавлению логики Go (для README/GitHub):
+echo "!!! Manual Step Required: Edit x/counter/keeper/msg_server_increment_count.go to add logic for incrementing the count. !!!" && \
+
+# 5. Запуск блокчейна (для локального тестирования)
+ignite chain serve
