@@ -16,4 +16,4 @@ echo "!!! Manual Step Required: Edit x/counter/keeper/msg_server_increment_count
 
 # 5. Запуск блокчейна (для локального тестирования)
 ignite chain serves
-end
+
