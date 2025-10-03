@@ -1,5 +1,4 @@
 SimpleCounterChain/Cosmos
-
 # 1. Создание проекта блокчейна
 ignite scaffold chain simplecounterchain && \
 cd simplecounterchain && \
